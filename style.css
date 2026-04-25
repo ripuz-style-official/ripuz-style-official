@@ -1,3 +1,4 @@
+/* From Uiverse.io by mrhyddenn */ 
 button {
   position: relative;
   padding: 10px 20px;
@@ -69,22 +70,4 @@ button:active {
   -webkit-transition: box-shadow 0.2s ease-in;
   -moz-transition: box-shadow 0.2s ease-in;
   transition: box-shadow 0.2s ease-in;
-}
-
-.button {
-  --color: #00A97F;
-  padding: 0.8em 1.7em;
-  background-color: transparent;
-  border-radius: .3em;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .5s;
-  font-weight: 400;
-  font-size: 17px;
-  border: 1px solid var(--color);
-  font-family: inherit;
-  text-transform: uppercase;
-  color: var(--color);
-  z-index: 1;
 }
