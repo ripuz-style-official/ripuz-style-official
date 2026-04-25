@@ -1,55 +1,73 @@
-/* Butonun temel tasarımı */
-.button {
-  --color: #00A97F;
-  padding: 0.8em 1.7em;
-  background-color: transparent;
-  border-radius: .3em;
+/* From Uiverse.io by mrhyddenn */ 
+button {
   position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .5s;
-  font-weight: 400;
-  font-size: 17px;
-  border: 1px solid var(--color);
-  font-family: inherit;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
   text-transform: uppercase;
-  color: var(--color);
-  z-index: 1;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-/* Üzerine gelince oluşan dolgu efekti */
-.button::before, .button::after {
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
   content: '';
   display: block;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 86%;
   position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  background-color: var(--color);
-  transition: 1s ease;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
 }
 
-.button::before {
-  top: -1em;
-  left: -1em;
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
 }
 
-.button::after {
-  left: calc(100% + 1em);
-  top: calc(100% + 1em);
-}
-
-.button:hover::before, .button:hover::after {
-  height: 410px;
-  width: 410px;
-}
-
-.button:hover {
-  color: rgb(10, 25, 30);
-}
-
-.button:active {
-  filter: brightness(.8);
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
 }
