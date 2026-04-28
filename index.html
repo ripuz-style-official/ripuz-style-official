@@ -1,201 +1,95 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head> <link rel="stylesheet" href="style.css">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Homepage: Ripuz_KICK</title>
+<title>Ripuz Official</title>
+
+<!-- Tailwind (buton için gerekli) -->
+<script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-
-body{
-margin:0;
-font-family:Arial;
-color:white;
-text-align:center;
-
-background-image:url("background.jpg");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
-
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: url("background.jpg") no-repeat center center/cover;
 }
 
-.overlay{
-background:rgba(0,0,0,0.7);
-min-height:15vh;
-padding-top:20px;
-}
+/* karartma efekti */
+.overlay {
+  min-height: 100vh;
+  background: rgba(0,0,0,0.7);
 
-h1{
-font-size:60px;
-letter-spacing:3px;
-}
-
-p{
-font-size:22px;
-}
-
-p3{
-font-size:18px;
-}
-
-/* From Uiverse.io by LightAndy1 */ 
-/* This is an example, feel free to delete this code */
-.tooltip-container {
-  position: relative;
-  background-color: #ff3cac;
-  background-image: linear-gradient(
-    225deg,
-    #ff3cac 0%,
-    #784ba0 50%,
-    #2b86c5 100%
-  );
-  cursor: pointer;
-  transition: all 0.2s;
-  font-size: 17px;
-  /*padding: 0.7em 1.8em;*/
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  fill: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 25px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-}
-.tooltip-container .borde-back {
-  width: 60px;
-  height: 60px;
-  background-color: #232428;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: none;
+  text-align: center;
 }
 
-.tooltip-container .icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  background-color: #5865f2;
-  cursor: pointer;
+/* yazılar */
+h1 {
+  font-size: 50px;
+  margin: 10px 0;
 }
 
-.tooltip {
-  position: absolute;
-  top: -2;
-  left: -45px; /* Altere a posição inicial para a esquerda, fora da tela */
-  transform: translateX(
-    -32%
-  ); /* Usando translateX para controlar a transição da esquerda para a direita */
-  width: 160px;
-  height: 52px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.6s;
-  border-radius: 50px;
-  background-color: #5865f2;
-  background-image: linear-gradient(
-    -90deg,
-    #ff73fa 0%,
-    #5865f2 75%,
-    #5865f2 100%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  padding-right: 16px;
-  color: #fff;
-  font-size: 18px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+p {
+  font-size: 20px;
+  color: #ccc;
 }
 
-.tooltip::before {
-  position: absolute;
-  content: "";
-  height: 0.6em;
-  width: 0.6em;
-  right: -0.2em; /* Mude para a direita */
-  top: 50%; /* Altere o topo para o meio da tooltip */
-  transform: translateY(-50%) rotate(45deg); /* Use translateY para centralizar verticalmente */
-  background: var(--background);
+/* mobil uyum */
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  p { font-size: 16px; }
 }
-
-.tooltip-container:hover .tooltip {
-  left: 100%; /* Altere para a posição desejada (a direita) */
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  z-index: -10;
-}
-.tooltip-container:hover {
-  transform: translateX(-50px);
-  transition: 0.5s linear;
-}
-
-
 </style>
 </head>
 
-
-
-
 <body>
 
-<div class="overlay" style="text-align:center;">
+<div class="overlay">
 
-<h1>Ripuz_KICK</h1>
-<h1>Official KİCK Channel Web Site</h1>
+  <h1>Ripuz_KICK</h1>
+  <h1>Official Website</h1>
 
-<p>This Website is Designed By Ripuz Style</p>
-<p>Can You Join My Ripuz_KICK Discord Server & Kick Channel.</p>
+  <p>Join my community & follow my content</p>
 
-<p3>(Main Language: Turkish) Second Language English</p3>
+  <!-- BUTON -->
+  <div class="mt-10">
 
-</div>
+    <a href="https://discord.gg/3xrjpVdrKt" target="_blank">
 
+      <button
+        class="group relative p-4 rounded-2xl backdrop-blur-xl border-2 border-indigo-500/30 bg-gradient-to-br from-indigo-900/40 via-black to-black/80 shadow-2xl hover:shadow-indigo-500/30 hover:scale-[1.05] hover:-translate-y-1 active:scale-95 transition-all duration-500 cursor-pointer overflow-hidden"
+      >
 
-  
-<div class="overlay"> 
-<div style="display:flex; justify-content:center; margin-top:30px;">
-  
-  <!-- tooltip-container -->
+        <!-- animasyon -->
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-400/30 to-transparent -translate-x-full group-hover:translate-x-full transition duration-1000"></div>
 
-</div>
-<!-- From Uiverse.io by LightAndy1 --> 
-<div class="tooltip-container">
-  <span class="tooltip">JOİN DİSCORD</span>
-  <span class="text">
-    <div class="borde-back">
-      <div class="icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="23"
-          height="23"
-          class="bi bi-discord"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"
-          ></path>
-        </svg>
-      </div>
-    </div>
-  </span>
-</div>
+        <div class="relative flex items-center gap-4">
 
+          <!-- ikon -->
+          <div class="p-3 rounded-lg bg-indigo-500/30">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="24">
+              <path d="M20.317 4.3698a19.79 19.79 0 0 0-4.8851-1.5152..."/>
+            </svg>
+          </div>
 
+          <!-- yazı -->
+          <div class="text-left">
+            <div class="text-white font-semibold text-lg">Discord</div>
+            <div class="text-gray-400 text-sm">Join Community</div>
+          </div>
 
-  
-  
+        </div>
+
+      </button>
+
+    </a>
+
+  </div>
 
 </div>
 
